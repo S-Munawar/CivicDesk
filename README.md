@@ -2,7 +2,6 @@
 
 **A mobile app that empowers communities to report and track civic infrastructure issues.**
 
-> 🏆 **Smart India Hackathon 2025** - This app was developed for SIH 2025, where I served as the lead developer. Currently available as a demo on the [Google Play Store](https://play.google.com/store/apps/details?id=com.connect.janmarg).
 
 ## 🎯 What is CivicDesk?
 
@@ -40,8 +39,8 @@ By giving everyone a voice, CivicDesk helps build cleaner, safer, and better-mai
 
 1. **Clone and install**
    ```bash
-   git clone https://github.com/itsaryanchauhan/CivicDesk-APP.git
-   cd CivicDesk-APP
+   git clone https://github.com/S-Munawar/CivicDesk.git
+   cd CivicDesk
    npm install
    ```
 
@@ -56,7 +55,7 @@ By giving everyone a voice, CivicDesk helps build cleaner, safer, and better-mai
 
 ## 👤 Who Built This?
 
-Created by **Aryan Chauhan** ([@itsaryanchauhan](https://github.com/itsaryanchauhan))
+Created by **Shaik Abdul Munawar** ([@S-Munawar](https://github.com/S-Munawar))
 
 CivicDesk is a civic engagement initiative aimed at improving community infrastructure through citizen participation.
 
@@ -66,7 +65,7 @@ Want to help improve CivicDesk? Contributions are welcome! Feel free to fork the
 
 ## 📞 Get in Touch
 
-Have questions or suggestions? Open an issue on the [GitHub repository](https://github.com/itsaryanchauhan/CivicDesk-APP).
+Have questions or suggestions? Open an issue on the [GitHub repository](https://github.com/S-Munawar/CivicDesk).
 
 ---
 
