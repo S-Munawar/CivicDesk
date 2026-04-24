@@ -346,7 +346,7 @@ export default function HomeScreen() {
       {/* ===== FIX STARTS HERE ===== */}
       {/* Dropdowns are now rendered here, as overlays at the root level */}
 
-      {/* District Dropdown */}
+      {/* City Dropdown */}
       {showAreaSelector && (
         <>
           {/* Backdrop to capture touches */}

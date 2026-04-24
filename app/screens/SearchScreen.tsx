@@ -290,8 +290,8 @@ export default function SearchScreen() {
               </Text>
               <Text style={styles.exampleText}>• pothole (issue type)</Text>
               <Text style={styles.exampleText}>• Arjun (reporter name)</Text>
-              <Text style={styles.exampleText}>• Bokaro (district name)</Text>
-              <Text style={styles.exampleText}>• Dhanbad (district name)</Text>
+              <Text style={styles.exampleText}>• Mumbai (city name)</Text>
+              <Text style={styles.exampleText}>• Delhi (city name)</Text>
             </View>
           </View>
         ) : searchResults.length === 0 ? (
@@ -300,8 +300,8 @@ export default function SearchScreen() {
             <Text style={styles.emptyTitle}>No Reports Found</Text>
             <Text style={styles.emptySubtitle}>
               No reports match your search &quot;{searchQuery}&quot;. Try
-              different keywords, report IDs, or search for district names like
-              &quot;Bokaro&quot;, &quot;Ranchi&quot;, or &quot;Dhanbad&quot;.
+              different keywords, report IDs, or search for city names like
+              &quot;Mumbai&quot;, &quot;Bangalore&quot;, or &quot;Delhi&quot;.
             </Text>
           </View>
         ) : (

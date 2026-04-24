@@ -38,33 +38,6 @@ const issueTypes = [
   { value: "overgrown-weed", label: "Overgrown Weed", icon: "leaf-outline" },
 ];
 
-const wardOptions = [
-  "Bokaro",
-  "Chatra",
-  "Deoghar",
-  "Dhanbad",
-  "Dumka",
-  "East Singhbhum",
-  "Garhwa",
-  "Giridih",
-  "Godda",
-  "Gumla",
-  "Hazaribag",
-  "Jamtara",
-  "Khunti",
-  "Koderma",
-  "Latehar",
-  "Lohardaga",
-  "Palamu",
-  "Pakur",
-  "Ramgarh",
-  "Ranchi",
-  "Sahebganj",
-  "Seraikela Kharsawan",
-  "Simdega",
-  "West Singhbhum",
-];
-
 export default function CreateReportModal({
   visible,
   onClose,
@@ -85,7 +58,7 @@ export default function CreateReportModal({
   const [showWardSelector, setShowWardSelector] = useState(false);
 
   const { addReport } = useReports();
-  const { addCommunityReport, selectedArea } = useCommunityReports();
+  const { addCommunityReport, selectedArea, areas } = useCommunityReports();
 
   const requestLocationPermissions = async () => {
     const { status } = await Location.requestForegroundPermissionsAsync();
@@ -301,7 +274,7 @@ export default function CreateReportModal({
         location: {
           latitude: currentLocation?.latitude || 0,
           longitude: currentLocation?.longitude || 0,
-          address: currentLocation?.address || `${reportArea}, Jharkhand`,
+          address: currentLocation?.address || `${reportArea}, India`,
           area: reportArea,
         },
       });
@@ -414,10 +387,10 @@ export default function CreateReportModal({
           {/* District Selection Section (Optional) */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>
-              District Selection (Optional)
+              City Selection (Optional)
             </Text>
             <Text style={styles.sectionSubtitle}>
-              Select your district in Jharkhand if you know it, otherwise
+              Select your city in India if you know it, otherwise
               we&apos;ll detect it automatically
             </Text>
 
@@ -431,7 +404,7 @@ export default function CreateReportModal({
                   selectedWard && styles.wardSelectorTextSelected,
                 ]}
               >
-                {selectedWard || "Select District (Optional)"}
+                {selectedWard || "Select City (Optional)"}
               </Text>
               <Ionicons
                 name={showWardSelector ? "chevron-up" : "chevron-down"}
@@ -455,10 +428,10 @@ export default function CreateReportModal({
                     }}
                   >
                     <Text style={styles.wardOptionText}>
-                      Auto-detect district
+                      Auto-detect city
                     </Text>
                   </TouchableOpacity>
-                  {wardOptions.map((ward) => (
+                  {areas.map((ward) => (
                     <TouchableOpacity
                       key={ward}
                       style={styles.wardOption}
